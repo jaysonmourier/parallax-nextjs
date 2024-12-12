@@ -11,7 +11,7 @@ interface BlurAnimationProps {
 export default function BlurAnimation({ animation, style }: BlurAnimationProps) {
     return (
         <Lottie 
-        className="blur z-index-negative bluranim"  
+        className="z-index-negative blur"  
         animationData={animation} 
         style={style}
         />

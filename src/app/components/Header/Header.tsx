@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import styles from '@/app/components/Header/Header.module.css';
 import Image from 'next/image';
+import BlurAnimation from '../BlurAnimation/BlurAnimation';
+import animationData from '@/app/assets/lotties/object1.json';
+import animationData2 from '@/app/assets/lotties/object2.json';
 
 export default function Header() {
     const [offsetY, setOffsetY] = useState(0);
@@ -39,6 +42,22 @@ export default function Header() {
                             transform: `translateY(${offsetY * 0.5}px)`
                         }
                     }
+                />
+            </div>
+            <div className={styles.animation2}>
+                <BlurAnimation
+                    animation={animationData}
+                    style={{
+                        transform: `translateY(${offsetY * 0.7}px)`
+                    }}
+                />
+            </div>
+            <div className={styles.animation}>
+                <BlurAnimation
+                    animation={animationData2}
+                    style={{
+                        transform: `translateY(${offsetY * 0.7}px)`
+                    }}
                 />
             </div>
         </header>
