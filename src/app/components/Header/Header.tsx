@@ -5,6 +5,7 @@ import styles from '@/app/components/Header/Header.module.css';
 import Image from 'next/image';
 import BlurAnimation from '../BlurAnimation/BlurAnimation';
 import animationData from '@/app/assets/lotties/object1.json';
+import phoneAnimationData from '@/app/assets/lotties/phone.json';
 
 export default function Header() {
     const [offsetY, setOffsetY] = useState(0);
@@ -25,7 +26,14 @@ export default function Header() {
                     <p className={styles.lastname}>mourier</p>
                 </div>
                 <p className={`${styles.dev} self-end`}>développeur</p>
-                <p className={styles.devtype}>mobile<br />& web</p>
+                <div className='flex flex-row'>
+                    <p className={styles.devtype}>mobile<br />& web</p>
+                    <div className={styles.phoneAnimation}>
+                        <BlurAnimation
+                            animation={phoneAnimationData}
+                        />
+                    </div>
+                </div>
             </div>
             <div className={styles.image}>
                 <Image
@@ -46,6 +54,7 @@ export default function Header() {
             <div className={styles.animation}>
                 <BlurAnimation
                     animation={animationData}
+                    classname="z-index-negative blur" 
                     style={{
                         transform: `translateY(${offsetY * 0.7}px)`
                     }}

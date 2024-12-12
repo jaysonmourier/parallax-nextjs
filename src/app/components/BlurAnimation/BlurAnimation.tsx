@@ -5,13 +5,14 @@ import { CSSProperties } from "react";
 
 interface BlurAnimationProps {
     animation: object;
-    style?: CSSProperties
+    style?: CSSProperties;
+    classname?: string;
 }
 
-export default function BlurAnimation({ animation, style }: BlurAnimationProps) {
+export default function BlurAnimation({ animation, style, classname }: BlurAnimationProps) {
     return (
         <Lottie 
-        className="z-index-negative blur"  
+        className={classname} 
         animationData={animation} 
         style={style}
         />

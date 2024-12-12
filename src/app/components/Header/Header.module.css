@@ -53,3 +53,10 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+
+.phoneAnimation {
+    width: 80px;
+    height: 80px;
+    z-index: 9;
+    transform: translateX(-30px) translateY(-20px) scale(1.5);
+}
