@@ -44,17 +44,9 @@ export default function Header() {
                     }
                 />
             </div>
-            <div className={styles.animation2}>
-                <BlurAnimation
-                    animation={animationData}
-                    style={{
-                        transform: `translateY(${offsetY * 0.7}px)`
-                    }}
-                />
-            </div>
             <div className={styles.animation}>
                 <BlurAnimation
-                    animation={animationData2}
+                    animation={animationData}
                     style={{
                         transform: `translateY(${offsetY * 0.7}px)`
                     }}
