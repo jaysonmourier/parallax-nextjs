@@ -1,7 +1,20 @@
+"use client";
+
+import { useEffect, useState } from 'react';
 import styles from '@/app/components/Header/Header.module.css';
 import Image from 'next/image';
 
 export default function Header() {
+    const [offsetY, setOffsetY] = useState(0);
+
+    const handleScroll = () => {
+        setOffsetY(window.scrollY);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
         <header className={`${styles.header} flex flex-column justify-around`}>
             <div className={styles.infos}>
@@ -23,6 +36,7 @@ export default function Header() {
                             objectFit: "contain",
                             objectPosition: "center",
                             zIndex: "0",
+                            transform: `translateY(${offsetY * 0.5}px)`
                         }
                     }
                 />
