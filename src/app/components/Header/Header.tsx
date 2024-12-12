@@ -5,7 +5,6 @@ import styles from '@/app/components/Header/Header.module.css';
 import Image from 'next/image';
 import BlurAnimation from '../BlurAnimation/BlurAnimation';
 import animationData from '@/app/assets/lotties/object1.json';
-import animationData2 from '@/app/assets/lotties/object2.json';
 
 export default function Header() {
     const [offsetY, setOffsetY] = useState(0);
