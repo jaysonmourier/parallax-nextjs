@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import styles from '@/app/components/Header/Header.module.css';
+import BlurAnimation from '../BlurAnimation/BlurAnimation';
+import animationData from '@/app/assets/lotties/object1.json';
 
 export default function Header() {
     const [offsetY, setOffsetY] = useState(0);
@@ -16,7 +18,15 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`${styles.header} flex flex-column`}>
+        <header className={`${styles.header} flex flex-column justify-center`}>
+            <BlurAnimation animation={animationData} style={
+                {
+                    top: "0px",
+                    left: "0px",
+                    position: "absolute",
+                    transform: `translateY(${offsetY * 0.8}px)`
+                }
+            } />
             <div className={`${styles.infos} flex flex-column justify-around`}>
                 <div className={styles.name}>
                     <p className={styles.firstname}>jayson</p>

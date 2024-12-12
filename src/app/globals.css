@@ -40,3 +40,15 @@ body {
   background-color: var(--background);
   color: var(--primary)
 }
+
+.z-index-negative {
+  z-index: -1;
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.bluranim {
+  position: absolute;
+}
