@@ -30,6 +30,7 @@
     display: flex; /* Active le mode flexbox */
     flex-direction: column; /* Empile les enfants verticalement */
     justify-content: space-between; /* Répartit les enfants avec de l’espace entre eux */
+    text-shadow: 3px 3px 5px rgb(0, 0, 0, 0.5);
 }
 
 .names, .dev, .devtype {
